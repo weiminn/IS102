@@ -18,10 +18,11 @@ def perform_once(employee_with_birthyear_list):
 def get_IDs_with_birthyear(year, employee_with_birthyear_list):
   # for now, this function always returns an empty list
   _arr = []
-  print year
+  # employee_with_birthyear_list.sort(key=lambda x: x[1])
+  # print(year)
   for em in employee_with_birthyear_list:
     # print em[1]
     if em[1] == year:
-      _arr.append(em)
+      _arr.append(em[0])
   # print _arr
   return _arr
