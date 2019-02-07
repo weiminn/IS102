@@ -1,4 +1,4 @@
-arr = [62, 77, 18, 48, 64, 45, 34, 88]
+arr = [62, 77, 18, 48, 64, 45, 34, 88, 32, 33, 54, 53, 65, 23, 23, 12, 62, 77, 18, 48, 64, 45, 34, 88, 32, 33, 54, 53, 65, 23, 23, 12]
 
 def mSort():
     g = 1
@@ -30,7 +30,7 @@ def merge(i, g, a):
             elif( len(f_arr) != 0 and len(s_arr) != 0 ):
                 if f_arr[0] > s_arr[0]:
                     _arr.append(s_arr.pop(0))
-                elif f_arr[0] < s_arr[0]:
+                else:
                     _arr.append(f_arr.pop(0))
         
         # print _arr
