@@ -8,7 +8,7 @@ def iSet(arr):
     while i < len(arr):
         j = i
         while (len(list(set(arr[j]))) < len(list(set(arr[j-1])))) and j >= 0:
-            print(arr[j], arr[j-1])
+            # print(arr[j], arr[j-1])
             temp = arr[j-1]
             arr[j-1] = arr[j]
             arr[j] = temp
