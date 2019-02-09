@@ -4,29 +4,21 @@ def bSearch(n):
 
     high = len(arr) - 1
     low = 0
-    mid = (high + low)/2
+    mid = int((high + low)/2)
 
-    print mid
+    print (mid)
 
-    while not (low + 1 > high):
-        mid = (high + low)/2
+    while (low <= high):
+        mid = int((high + low)/2)
         print("new mid", low, '.', high, '=', mid)
 
-        if low + 1 == high:
-            if n == arr[mid]:
-                print "Found at position " + str(mid)
-                return
-            elif n == arr[mid+1]:
-                print "Found at position " + str(mid+1)
-                return
+        if n > arr[mid]:
+            low = mid + 1
+        elif n < arr[mid]:
+            high = mid - 1
         else:
-            if n > arr[mid]:
-                low = mid
-            elif n < arr[mid]:
-                high = mid
-            else:
-                print "Found at position " + str(mid)
-                return
-    print "not found"
+            print("Found at position " + str(mid))
+            return
+    print("not found")
 
-bSearch(34)
+bSearch(10)
