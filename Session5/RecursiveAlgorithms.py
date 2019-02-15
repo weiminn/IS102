@@ -20,4 +20,13 @@ def fibonacci(arr, i, n):
     else:
         return arr
 
-print('fibonacci', fibonacci([], 1, 100))
+# print('fibonacci', fibonacci([], 1, 100))
+
+def isPalindrome(s):
+    if len(s) > 1:
+        if(s[0] == s[len(s)-1]):
+            isPalindrome(s[1:len(s)-1])
+        else:
+            return False
+    return True
+print(isPalindrome("ffaff"))
