@@ -9,8 +9,11 @@ def checkBalance(string):
             if b.index(c) < 3:
                 s.push(c)
             else:
-                if s.pop() != b[b.index(c)-3]:
+                if s.isEmpty():
                     return False
+                else:
+                    if s.pop() != b[b.index(c)-3]:
+                        return False
     return True
 
-print(checkBalance('[ a + { b / ( c - d ) + e / (f + g ) } - h ]'))
+print(checkBalance('[ ]]]a + { b / ( c - d ) + e / (f + g ) } - h ]'))
