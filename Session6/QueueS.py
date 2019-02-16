@@ -1,6 +1,6 @@
 from pythonds import Stack
 
-class StackQ:
+class QueueS:
     s1 = Stack()
     s2 = Stack()
 
@@ -21,7 +21,7 @@ class StackQ:
 
         return toReturn
 
-sq = StackQ()
+sq = QueueS()
 sq.nQ(1)
 sq.nQ(2)
 sq.nQ(3)
