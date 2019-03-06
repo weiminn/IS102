@@ -1,24 +1,23 @@
-arr = [4, 10, 22, 35, 36, 57, 65, 71, 79, 83, 87, 89, 90, 91, 93]
+def bSearch(arr, low, high, n):
 
-def bSearch(n):
+  mid = int((low + high)/2)
 
-    high = len(arr) - 1
-    low = 0
-    mid = int((high + low)/2)
+  print (mid, arr[mid])
 
-    print (mid)
+  if n > arr[mid]:
+    if(low < mid):
+      return bSearch(arr, mid+1, high, n)
+    else:
+      return str("not found")
+  elif n < arr[mid]:
+    if(low < mid):
+      return bSearch(arr, low, mid-1, n)
+    else:
+      return str("not found")
+  else:
+    return str("Found at " +  str(mid))
 
-    while (low <= high):
-        mid = int((high + low)/2)
-        print("new mid", low, '.', high, '=', mid)
+_arr = [4, 10, 22, 35, 36, 57, 65, 71, 79, 83, 87, 89, 90, 91, 93]
 
-        if n > arr[mid]:
-            low = mid + 1
-        elif n < arr[mid]:
-            high = mid - 1
-        else:
-            print("Found at position " + str(mid))
-            return
-    print("not found")
-
-bSearch(10)
+# result = bSearch(_arr, 0, len(_arr)-1, 35)
+# print(result)
