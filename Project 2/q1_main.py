@@ -3,12 +3,14 @@ import numpy as np
 import copy
 import utilities as util
 import q1
+import os
+print(os.path.dirname(os.path.abspath(__file__)))
 
 # change these values to vary the test case
 START = "GUA"  # ensure that the START location is not found in ORDER_FILE          
 NUM_TRUCKS = 3
-LOCATIONS_FILE = "data\locations_1.csv" 
-ORDER_FILE = "data\order_1.csv"
+LOCATIONS_FILE = os.path.dirname(os.path.abspath(__file__)) + "\data\locations_1.csv" 
+ORDER_FILE = os.path.dirname(os.path.abspath(__file__)) + "\data\order_1.csv"
 
 orders = util.read_order(ORDER_FILE)
 orders_copy = copy.deepcopy(orders)
